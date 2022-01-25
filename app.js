@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   const data = {
     title: 'Home',
     startingContent: homeStartingContent,
-    content: posts
+    contents: posts
   }
   res.render('home', data)
 })
