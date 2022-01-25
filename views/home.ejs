@@ -1,5 +1,7 @@
 <%- include('partials/header') -%>
 <h1><%= title %></h1>
 <p><%= startingContent %></p>
-<p><% console.log(content) %></p>
+<% for (var i = 0; i < content.length; i++) { %>
+  <p><% console.log(content[i].title) %></p>
+<% } %>
 <%- include('partials/footer') -%>
