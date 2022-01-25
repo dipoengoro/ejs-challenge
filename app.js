@@ -20,9 +20,9 @@ app.use(express.static("public"))
 app.get('/', (req, res) => {
   const data = {
     title: 'Home',
-    startingContent: homeStartingContent
+    startingContent: homeStartingContent,
+    content: posts
   }
-  console.log(posts)
   res.render('home', data)
 })
 
