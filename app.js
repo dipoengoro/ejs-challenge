@@ -11,19 +11,40 @@ const app = express()
 
 app.set('view engine', 'ejs')
 
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 app.use(express.static("public"))
 
 app.get('/', (req, res) => {
-  res.render('home', {title: 'Home', startingContent: homeStartingContent})
+  const data = {
+    title: 'Home',
+    startingContent: homeStartingContent
+  }
+  res.render('home', data)
 })
 
 app.get('/about', (req, res) => {
-  res.render('about', {title: 'About', aboutContent: aboutContent})
+  const data = {
+    title: 'About',
+    aboutContent: aboutContent
+  }
+  res.render('about', data)
 })
 
 app.get('/contact', (req, res) => {
-  res.render('contact', {title: 'Contact', contactContent: contactContent})
+  const data = {
+    title: 'Contact',
+    contactContent: contactContent
+  }
+  res.render('contact', data)
+})
+
+app.get('/compose', (req, res) => {
+  const data = {
+    title: 'Compose'
+  }
+  res.render('compose', data)
 })
 
 app.listen(PORT, function() {
