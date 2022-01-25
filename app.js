@@ -48,8 +48,13 @@ app.get('/compose', (req, res) => {
 })
 
 app.post('/compose', (req, res) => {
-  const item = req.body.newItem
-  console.log(item)
+  const title = req.body.postTitle
+  const body = req.body.postBody
+  const post = {
+    title: title,
+    body: body
+  }
+  console.log(post)
   res.redirect('/compose')
 })
 
