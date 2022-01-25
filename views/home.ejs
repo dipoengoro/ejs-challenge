@@ -1,7 +1,8 @@
 <%- include('partials/header') -%>
 <h1><%= title %></h1>
 <p><%= startingContent %></p>
-<% contents.forEach((content, i) => { %>
-  <p><% console.log(content.title) %></p>
+<% contents.forEach((content) => { %>
+  <h1><%= content.title %></h1>
+  <p><%= content.body %></p>
 <% }); %>
 <%- include('partials/footer') -%>
